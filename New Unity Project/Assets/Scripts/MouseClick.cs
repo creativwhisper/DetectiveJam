@@ -46,6 +46,7 @@ public class MouseClick : MonoBehaviour {
 							if(Point1Name == "Pin(Clone)"){
 								//parent.transform = hit.collider.gameObject.transform.parent;
 								Destroy(hit.collider.gameObject.transform.parent.transform.gameObject);
+								GameObject.Find ("GameController").GetComponent<ClueSelect> ().numberOfClues--;
 								click_order = 0;
 							}
 							else{
@@ -80,6 +81,7 @@ public class MouseClick : MonoBehaviour {
 
 							FinalLine.transform.SetPositionAndRotation(new Vector3(0, 0, 0),Quaternion.identity);
 							click_order = 0;
+							GameObject.Find ("GameController").GetComponent<ClueSelect> ().numberOfClues++;
 							newNote.GetComponent<NoteClick> ().obj1 = Point1Name;
 							newNote.GetComponent<NoteClick> ().obj2 = Point2Name;
 						}

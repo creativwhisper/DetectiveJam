@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour {
 	public Text nameTextArea;
 	public Text dialogueTextArea;
 	public GameObject dialogueBoxPanel;
+	public GameObject selectVerb;
+	public Button Continue;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +21,7 @@ public class DialogueManager : MonoBehaviour {
 
 
 	public void StartDialogue(Dialogue d){
+		selectVerb.SetActive (false);
 		GameObject.Find ("Main Camera").GetComponent<MouseClick>().canIPut = false;
 		sentences.Clear ();
 		names.Clear ();
@@ -43,12 +46,20 @@ public class DialogueManager : MonoBehaviour {
 
 		string tmpsent = sentences.Dequeue ();
 		string tmpnam = names.Dequeue ();
-		dialogueTextArea.text = tmpsent;
-		nameTextArea.text = tmpnam;
+
+		if (tmpsent.Equals ("SELECT")) {
+			tmpsent = "[Selecciona una pista]";
+			tmpnam = "";
+			//Función josee
+			GameObject.Find("GameController").GetComponent<ClueSelect>().activated = true;
+			Continue.interactable = false;
+		}
+			dialogueTextArea.text = tmpsent;
+			nameTextArea.text = tmpnam;
 
 	}
 
-	private void EndOfDialogue(){
+	public void EndOfDialogue(){
 		dialogueBoxPanel.SetActive (false);
 		dialogueTextArea.text = "";
 		nameTextArea.text = "";

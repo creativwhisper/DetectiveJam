@@ -12,6 +12,7 @@ public class NoteClick : MonoBehaviour {
 	public GameObject panel;
 	private bool aux = false;
 
+
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			panel.SetActive (false);
@@ -23,10 +24,12 @@ public class NoteClick : MonoBehaviour {
 	}
 
 	private void OnMouseDown() {
-		GameObject.Find ("Main Camera").GetComponent<MouseClick>().canIPut = false;
-		panel.SetActive (true);
-		desplegable.GetComponent<Verb> ().currentNote = this.gameObject;
-		desplegable.value = verb;
-		aux = true;
+		if (GameObject.Find ("Main Camera").GetComponent<MouseClick> ().canIPut != false) {
+			GameObject.Find ("Main Camera").GetComponent<MouseClick> ().canIPut = false;
+			panel.SetActive (true);
+			desplegable.GetComponent<Verb> ().currentNote = this.gameObject;
+			desplegable.value = verb;
+			aux = true;
+		}
 	}
 }
