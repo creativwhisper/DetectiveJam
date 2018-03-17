@@ -16,7 +16,8 @@ public class ClickToContinueText : MonoBehaviour {
         {
             if (lineCounter == 4)
             {
-                SceneManager.LoadScene("Main Scene");
+                GameObject.Find("Fade").GetComponent<Fade>().LoadScene("Main Scene");
+                
             }
             else
             {

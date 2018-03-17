@@ -68,7 +68,7 @@ public class MouseClick : MonoBehaviour {
 							//Point2.name = "esfera2";
 							FinalLine = Instantiate(Line, point, Quaternion.identity);
 							Vector3 midpoint = (Point1.transform.position + Point2.transform.position) / 2f;
-							midpoint = new Vector3(midpoint.x, midpoint.y, midpoint.z -0.1f);
+							midpoint = new Vector3(midpoint.x, midpoint.y, midpoint.z -0.03f);
 							GameObject newNote = Instantiate (note, midpoint, note.transform.localRotation);
 							newNote.transform.parent = Point1.transform.parent ;
 							Point2.transform.parent = Point1.transform.parent ;
@@ -79,7 +79,7 @@ public class MouseClick : MonoBehaviour {
 							line.SetPosition(0, Point1.transform.position);
 							line.SetPosition(1, Point2.transform.position);
 
-							FinalLine.transform.SetPositionAndRotation(new Vector3(0, 0, 0),Quaternion.identity);
+							FinalLine.transform.SetPositionAndRotation(new Vector3(0, 0, -0.02f),Quaternion.identity);
 							click_order = 0;
 							GameObject.Find ("GameController").GetComponent<ClueSelect> ().numberOfClues++;
 							newNote.GetComponent<NoteClick> ().obj1 = Point1Name;

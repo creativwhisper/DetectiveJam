@@ -54,7 +54,14 @@ public class DialogueManager : MonoBehaviour {
 			GameObject.Find("GameController").GetComponent<ClueSelect>().activated = true;
 			Continue.interactable = false;
 		}
-			dialogueTextArea.text = tmpsent;
+
+        if(tmpsent.Equals("VICTORY"))
+        {
+            GameObject.Find("Fade").GetComponent<Fade>().LoadScene("Ending");
+            return;
+        }
+
+            dialogueTextArea.text = tmpsent;
 			nameTextArea.text = tmpnam;
 
 	}
