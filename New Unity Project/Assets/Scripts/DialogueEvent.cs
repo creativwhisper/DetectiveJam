@@ -7,7 +7,7 @@ public class DialogueEvent : MonoBehaviour {
 	public int currentDialogue = 0;
 	public Dialogue[] dialogues;
 
-	public void LaunchDialogue(){
-		FindObjectOfType<DialogueManager> ().StartDialogue (this.dialogues[currentDialogue]);
+	public void LaunchDialogue(bool t=false){
+		FindObjectOfType<DialogueManager> ().StartDialogue (this.dialogues[currentDialogue], t);
 	}
 }

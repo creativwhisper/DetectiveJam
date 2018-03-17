@@ -10,6 +10,9 @@ EditorBuildSettings:
     guid: f0d9ee2a14ce2b844a92fa5dc9d8c2e5
   - enabled: 1
     path: Assets/Scenes/Intro.unity
+    guid: 6f5c24b57d81d934f9a67471649e0428
+  - enabled: 1
+    path: Assets/Scenes/Case Intro.unity
     guid: b394e4f873377fe4cbb3804953e5f8b1
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
@@ -17,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 7434994e3b857a74ab7ca4736dc86e4e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: bfdc11d2d29aa844aa358cd606e314b6

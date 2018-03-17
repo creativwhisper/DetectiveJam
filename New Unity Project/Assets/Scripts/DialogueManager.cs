@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour {
 	public GameObject dialogueBoxPanel;
 	public GameObject selectVerb;
 	public Button Continue;
+	private int aux = 4;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 
-	public void StartDialogue(Dialogue d){
+	public void StartDialogue(Dialogue d, bool t=false){
 		selectVerb.SetActive (false);
 		GameObject.Find ("Main Camera").GetComponent<MouseClick>().canIPut = false;
 		sentences.Clear ();
@@ -35,7 +36,8 @@ public class DialogueManager : MonoBehaviour {
 		}
 
 		dialogueBoxPanel.SetActive (true);
-		DisplayNextSentence ();
+		if(!t)
+			DisplayNextSentence ();
 	}
 
 	public void DisplayNextSentence(){
@@ -48,8 +50,8 @@ public class DialogueManager : MonoBehaviour {
 		string tmpnam = names.Dequeue ();
 
 		if (tmpsent.Equals ("SELECT")) {
-			tmpsent = "[Selecciona una pista]";
-			tmpnam = "";
+			tmpsent = "What is it? (Select a note to check)";
+			tmpnam = "Inspector:";
 			//Función josee
 			GameObject.Find("GameController").GetComponent<ClueSelect>().activated = true;
 			Continue.interactable = false;
