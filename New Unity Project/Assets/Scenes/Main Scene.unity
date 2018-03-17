@@ -1694,6 +1694,71 @@ Transform:
   m_Father: {fileID: 404771891}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &720597752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 720597754}
+  - component: {fileID: 720597753}
+  m_Layer: 0
+  m_Name: Spotlight (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &720597753
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720597752}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 0.9852941, g: 0.9193413, b: 0.7462154, a: 1}
+  m_Intensity: 0.7
+  m_Range: 50
+  m_SpotAngle: 90
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &720597754
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720597752}
+  m_LocalRotation: {x: 0.52135473, y: -0, z: -0, w: 0.8533401}
+  m_LocalPosition: {x: 0.000011444092, y: 12, z: -14.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 62.846004, y: 0, z: 0}
 --- !u!1 &767086256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,6 +4153,7 @@ GameObject:
   - component: {fileID: 1780073267}
   - component: {fileID: 1780073266}
   - component: {fileID: 1780073270}
+  - component: {fileID: 1780073271}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4176,6 +4242,17 @@ MonoBehaviour:
   canIPut: 1
   separation: 3
   lerpFactor: 0.2
+--- !u!114 &1780073271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1780073265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88965afef5603424986d2a5c0c1cc5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1793275863
 RectTransform:
   m_ObjectHideFlags: 0
