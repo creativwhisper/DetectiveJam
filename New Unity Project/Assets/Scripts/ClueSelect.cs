@@ -76,14 +76,10 @@ public class ClueSelect : MonoBehaviour {
 				//Ya me has dicho esa pista
 				this.changeDialogue (3);
 		} else {
-			bool aux1 = cluesArray.Contains ("closeRoom");
-			bool aux2 = cluesArray.Contains ("secure");
-			bool aux3 = cluesArray.Contains ("coupleProblems");
-			bool aux4 = cluesArray.Contains ("air conditioner");
-			bool aux5 = cluesArray.Contains ("time of death");
-			bool aux6 = cluesArray.Contains ("freezing cold");
+			bool aux1 = cluesArray.Contains (obj1);
+			bool aux2 = cluesArray.Contains (obj2);
 
-			if (aux1 || aux2 || aux3 || aux4 || aux5 || aux6)
+			if (aux1 || aux2)
 				this.changeDialogue (11);
 			else
 				this.changeDialogue (10);

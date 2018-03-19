@@ -1,4 +1,4 @@
-WindowsStandalone
+WebGL
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Intro.unity
@@ -121,7 +121,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 816f56b66021141834d88d860e81bd7a Assembly-CSharp.dll:.NoteClick
 2d7ec2d8c143eee7e498b426ac477109 Assembly-CSharp.dll:.MouseOverText
-2ce21437b141bda3ae0e115b7234c230 Assembly-CSharp.dll:.MouseClick
+f02d90119a6e59fad03e706ae80b9218 Assembly-CSharp.dll:.MouseClick
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 54caa8cb5edbcc3f2aa3dfca3b49f15e Assembly-CSharp.dll:.NewBehaviourScript

@@ -11,6 +11,7 @@ public class MouseClick : MonoBehaviour {
 	public bool canIPut = true; 
 	public float separation;
 	public float lerpFactor;
+    public AudioSource pinAudioClip;
 	private bool isZoomed = false;
 	private Vector3 initialPosition;
 	private Vector4 target;
@@ -46,12 +47,14 @@ public class MouseClick : MonoBehaviour {
 							if(Point1Name == "Pin(Clone)"){
 								//parent.transform = hit.collider.gameObject.transform.parent;
 								Destroy(hit.collider.gameObject.transform.parent.transform.gameObject);
-								GameObject.Find ("GameController").GetComponent<ClueSelect> ().numberOfClues--;
+                                pinAudioClip.Play();
+                                GameObject.Find ("GameController").GetComponent<ClueSelect> ().numberOfClues--;
 								click_order = 0;
 							}
 							else{
 								parent = new GameObject("Name");
 								Point1 = Instantiate (Sphere, point, Sphere.transform.localRotation);
+                                pinAudioClip.Play();
 								//Point1.name = "esfera1";
 								click_order = 1;
 								Point1.transform.parent = parent.transform;
@@ -65,8 +68,9 @@ public class MouseClick : MonoBehaviour {
 						if(hit.collider.gameObject.layer != 8){
 							Point2Name = hit.collider.gameObject.name;
 							Point2 = Instantiate (Sphere, point, Sphere.transform.localRotation);
-							//Point2.name = "esfera2";
-							FinalLine = Instantiate(Line, point, Quaternion.identity);
+                            pinAudioClip.Play();
+                            //Point2.name = "esfera2";
+                            FinalLine = Instantiate(Line, point, Quaternion.identity);
 							Vector3 midpoint = (Point1.transform.position + Point2.transform.position) / 2f;
 							midpoint = new Vector3(midpoint.x, midpoint.y, midpoint.z -0.03f);
 							GameObject newNote = Instantiate (note, midpoint, note.transform.localRotation);
